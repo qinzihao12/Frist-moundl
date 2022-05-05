@@ -1,17 +1,33 @@
 {
-  "name": "compentjs",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "vue": "^3.2.25"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
-    "vite": "^2.9.5"
-  }
+    "name": "compentjs",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite",
+        "preview": "vite preview",
+        "lint": "eslint src",
+        "lint:fix": "eslint src --fix --ext .ts,.tsx"
+    },
+    "dependencies": {
+        "@vueuse/core": "^8.3.1",
+        "axios": "^0.27.2",
+        "element-plus": "^2.1.11",
+        "sass": "^1.50.1",
+        "vue": "^3.2.25",
+        "vue-router": "^4.0.14",
+        "vuex": "^4.0.2",
+        "vuex-persistedstate": "^4.1.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^2.3.1",
+        "@vue/compiler-sfc": "^3.0.0-beta.1",
+        "eslint": "^8.14.0",
+        "naive-ui": "^2.28.2",
+        "unplugin-auto-import": "^0.7.1",
+        "unplugin-vue-components": "^0.19.3",
+        "vfonts": "^0.0.3",
+        "vite": "^2.9.5",
+        "vue-cli-plugin-vue-next": "~0.1.4"
+    }
 }

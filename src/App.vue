@@ -1,21 +1,37 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+import {ref,computed,onMounted, reactive,provide} from 'vue'
+import {useStore,mapMutations} from 'vuex'
+import loyu from './views/loyu/loyu.vue' 
+import {useRoute,useRouter} from 'vue-router'
 
+const Route=useRoute() 
+const Router=useRouter() 
+const store=useStore();
+const i=computed(()=>{
+  return store.state.IFoeNO  
+})
+onMounted(()=>Router.push('/loyu'));
+provide('yi',"亲只好")
+</script>
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+
+ <!-- <loyu></loyu>  -->
+
+ <router-view class="p"></router-view>
+
 </template>
 
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+.p{
+  transition: 2s linear all;
+  
+}
+
 </style>
