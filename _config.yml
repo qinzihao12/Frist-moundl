@@ -1,1 +1,5 @@
 theme: jekyll-theme-cayman
+deploy:
+  type: git
+  repo: git@github.com:yslli0123/yslli0123.github.io.git
+  branch: main
